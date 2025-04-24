@@ -9,30 +9,39 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Roboto Mono', monospace;
 }
-
-button {
+ button{
   cursor: pointer;
-}
-
+ }
 #content {
   display: grid;
-  grid-template-columns: 1fr 50% 1fr;
+  grid-template-columns: 1fr 80% 1fr;
   height: 100%;
   width: 100%;
 }
 
-#left, #middle, #right {
+#left {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+#middle {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#middleDiv {
+#right {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+#middleDiv{
   display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  grid-template-rows: repeat(9, 1fr);
+  grid-template-columns: repeat(9,1fr);
+  grid-template-rows: repeat(9,1fr);
   justify-content: center;
   align-items: center;
   height: 80%;
@@ -44,7 +53,7 @@ button {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-#middleDiv button {
+#middleDiv button{
   height: 100%;
   border-radius: 0;
   border: none;
@@ -54,45 +63,45 @@ button {
   font-family: 'Roboto Mono', monospace;
 }
 
-#middleDiv button.clicked {
-  background-color: rgba(122, 204, 156, 255);
+#middleDiv button.clicked{
+  background-color: rgba(122,204,156,255);
 }
 
-#middleDiv button.bigBorderBottom {
+#middleDiv button.bigBorderBottom{
   border-bottom: 6px solid #333;
 }
 
-#middleDiv button.bigBorderTOP {
+#middleDiv button.bigBorderTOP{
   border-top: 6px solid #333;
 }
 
-#middleDiv button.bigBorderLeft {
+#middleDiv button.bigBorderLeft{
   border-left: 6px solid #333;
 }
 
-#middleDiv button.bigBorderRight {
+#middleDiv button.bigBorderRight{
   border-right: 6px solid #333;
 }
 
-#middleDiv button.smallBorderBottom {
+#middleDiv button.smallBorderBottom{
   border-bottom: 2px solid #333;
 }
 
-#middleDiv button.smallBorderTOP {
+#middleDiv button.smallBorderTOP{
   border-top: 2px solid #333;
 }
 
-#middleDiv button.smallBorderLeft {
+#middleDiv button.smallBorderLeft{
   border-left: 2px solid #333;
 }
 
-#middleDiv button.smallBorderRight {
+#middleDiv button.smallBorderRight{
   border-right: 2px solid #333;
 }
 
-#rightDiv {
+#rightDiv{
   display: grid;
-  grid-template-rows: repeat(9, 1fr);
+  grid-template-rows: repeat(9,1fr);
   height: 80%;
   justify-content: center;
   align-items: center;
@@ -110,7 +119,7 @@ button {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease;
   cursor: pointer;
-  color: rgba(84, 143, 87, 255);
+  color: rgba(84,143,87,255);
 }
 
 #rightDiv button:hover {
@@ -124,15 +133,16 @@ button {
   transform: scale(0.98);
 }
 
-#rightDiv button h4 {
+
+#rightDiv button h4{
   font-size: 200%;
   margin: 0;
   font-family: 'Roboto Mono', monospace;
 }
 
-#leftDiv {
+#leftDiv{
   display: grid;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(4,1fr);
   height: 80%;
   justify-content: center;
   align-items: center;
@@ -169,24 +179,25 @@ button {
   transform: scale(0.98);
 }
 
+
 #leftDiv img {
   width: 100%;
 }
 
-#leftDiv button h4 {
+#leftDiv button h4{
   font-size: 150%;
   margin: 0;
   font-family: 'Roboto Mono', monospace;
 }
 
-#leftDiv button h1 {
-  color: rgba(84, 143, 87, 255);
+#leftDiv button h1{
+  color: rgba(84,143,87,255);
   font-size: 300%;
   margin: 0;
   font-family: 'Roboto Mono', monospace;
 }
 
-#startPage {
+#startPage{
   display: flex;
   flex-direction: column;
 }
@@ -212,39 +223,182 @@ button {
   transform: scale(0.98);
 }
 
-/* 添加響應式設計 */
-@media (max-width: 1200px) {
-  #content {
-    grid-template-columns: 1fr 60% 1fr;
-  }
-  #rightDiv, #leftDiv {
-    width: 25%;
-  }
-  #middleDiv {
-    width: 90%;
-  }
+h1 {
+  font-size: 75px; /* 你可以根據需求調整數值 */
 }
 
-@media (max-width: 768px) {
-  #content {
-    grid-template-columns: 1fr 80% 1fr;
-  }
-  #rightDiv, #leftDiv {
-    width: 35%;
-  }
-  #middleDiv {
-    width: 85%;
-  }
+/* Easy */
+#startPage .easy {
+  padding: 10px 20px;
+  margin: 5px 0;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
 }
 
-@media (max-width: 480px) {
-  #content {
-    grid-template-columns: 1fr 100%;
-  }
-  #rightDiv, #leftDiv {
-    width: 100%;
-  }
-  #middleDiv {
-    width: 95%;
-  }
+#startPage .easy:hover {
+  background-color: #45a049;
+}
+
+#startPage .easy:active {
+  background-color: #3e8e41;
+  transform: scale(0.98);
+}
+
+/* Medium */
+#startPage .medium {
+  padding: 10px 20px;
+  margin: 5px 0;
+  background-color: #8BC34A;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+#startPage .medium:hover {
+  background-color: #7CB342;
+}
+
+#startPage .medium:active {
+  background-color: #689F38;
+  transform: scale(0.98);
+}
+
+/* Hard */
+#startPage .hard {
+  padding: 10px 20px;
+  margin: 5px 0;
+  background-color: #FF9800;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+#startPage .hard:hover {
+  background-color: #FB8C00;
+}
+
+#startPage .hard:active {
+  background-color: #F57C00;
+  transform: scale(0.98);
+}
+
+/* Very-Hard */
+#startPage .very-hard {
+  padding: 10px 20px;
+  margin: 5px 0;
+  background-color: #F44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+#startPage .very-hard:hover {
+  background-color: #E53935;
+}
+
+#startPage .very-hard:active {
+  background-color: #D32F2F;
+  transform: scale(0.98);
+}
+
+/* Insane */
+#startPage .insane {
+  padding: 10px 20px;
+  margin: 5px 0;
+  background-color: #B71C1C;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+#startPage .insane:hover {
+  background-color: #C62828;
+}
+
+#startPage .insane:active {
+  background-color: #D32F2F;
+  transform: scale(0.98);
+}
+
+/* Inhuman */
+#startPage .inhuman {
+  padding: 10px 20px;
+  margin: 5px 0;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+#startPage .inhuman:hover {
+  background-color: #424242;
+}
+
+#startPage .inhuman:active {
+  background-color: #616161;
+  transform: scale(0.98);
+}
+
+#startPage #letsGo {
+  padding: 10px 20px;
+  margin: 5px 0;
+  background-color: #007bff; /* 藍色 */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+#startPage #letsGo:hover {
+  background-color: #0056b3;
+}
+#startPage #letsGo:active {
+  background-color: #004085;
+  transform: scale(0.98);
+}
+
+.addedRight{
+  color: rgba(81,141,83,255);
+}
+
+.addedWrong{
+  color: red;
+}
+
+.littleNote{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(3,1fr);
+}
+
+.littleNote p{
+  color: rgba(81,141,83,255);
+  margin: 0;
+  font-size: 45%;
 }
