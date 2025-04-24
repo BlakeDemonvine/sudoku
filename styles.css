@@ -9,6 +9,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Roboto Mono', monospace;
 }
 
 button {
@@ -211,187 +212,6 @@ button {
   transform: scale(0.98);
 }
 
-h1 {
-  font-size: 75px;
-}
-
-/* Easy */
-#startPage .easy {
-  padding: 10px 20px;
-  margin: 5px 0;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.1s;
-}
-
-#startPage .easy:hover {
-  background-color: #45a049;
-}
-
-#startPage .easy:active {
-  background-color: #3e8e41;
-  transform: scale(0.98);
-}
-
-/* Medium */
-#startPage .medium {
-  padding: 10px 20px;
-  margin: 5px 0;
-  background-color: #8BC34A;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.1s;
-}
-
-#startPage .medium:hover {
-  background-color: #7CB342;
-}
-
-#startPage .medium:active {
-  background-color: #689F38;
-  transform: scale(0.98);
-}
-
-/* Hard */
-#startPage .hard {
-  padding: 10px 20px;
-  margin: 5px 0;
-  background-color: #FF9800;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.1s;
-}
-
-#startPage .hard:hover {
-  background-color: #FB8C00;
-}
-
-#startPage .hard:active {
-  background-color: #F57C00;
-  transform: scale(0.98);
-}
-
-/* Very-Hard */
-#startPage .very-hard {
-  padding: 10px 20px;
-  margin: 5px 0;
-  background-color: #F44336;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.1s;
-}
-
-#startPage .very-hard:hover {
-  background-color: #E53935;
-}
-
-#startPage .very-hard:active {
-  background-color: #D32F2F;
-  transform: scale(0.98);
-}
-
-/* Insane */
-#startPage .insane {
-  padding: 10px 20px;
-  margin: 5px 0;
-  background-color: #B71C1C;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.1s;
-}
-
-#startPage .insane:hover {
-  background-color: #C62828;
-}
-
-#startPage .insane:active {
-  background-color: #D32F2F;
-  transform: scale(0.98);
-}
-
-/* Inhuman */
-#startPage .inhuman {
-  padding: 10px 20px;
-  margin: 5px 0;
-  background-color: #000000;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.1s;
-}
-
-#startPage .inhuman:hover {
-  background-color: #424242;
-}
-
-#startPage .inhuman:active {
-  background-color: #616161;
-  transform: scale(0.98);
-}
-
-#startPage #letsGo {
-  padding: 10px 20px;
-  margin: 5px 0;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.1s;
-}
-
-#startPage #letsGo:hover {
-  background-color: #0056b3;
-}
-
-#startPage #letsGo:active {
-  background-color: #004085;
-  transform: scale(0.98);
-}
-
-.addedRight {
-  color: rgba(81, 141, 83, 255);
-}
-
-.addedWrong {
-  color: red;
-}
-
-.littleNote {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-}
-
-.littleNote p {
-  color: rgba(81, 141, 83, 255);
-  margin: 0;
-  font-size: 45%;
-}
-
 /* 添加響應式設計 */
 @media (max-width: 1200px) {
   #content {
@@ -401,8 +221,7 @@ h1 {
     width: 25%;
   }
   #middleDiv {
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(7, 1fr);
+    width: 90%;
   }
 }
 
@@ -411,23 +230,21 @@ h1 {
     grid-template-columns: 1fr 80% 1fr;
   }
   #rightDiv, #leftDiv {
-    width: 40%;
+    width: 35%;
   }
   #middleDiv {
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    width: 85%;
   }
 }
 
 @media (max-width: 480px) {
   #content {
-    grid-template-columns: 1fr 90% 1fr;
+    grid-template-columns: 1fr 100%;
   }
   #rightDiv, #leftDiv {
     width: 100%;
   }
   #middleDiv {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    width: 95%;
   }
 }
