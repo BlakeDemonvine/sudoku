@@ -46,9 +46,9 @@ function showPlayScreen(input) {
   } else if (input == 'left') {
     content += '<div id="leftDiv">';
     content += `<button><h1 id="dododo">0</h1><h4>Mistakes</h4></button>`;
-    content += `<button onclick="undo()"><img src="images/undo.png"><h4>Undo</h4></button>`;
-    content += `<button onclick="erase()"><img src="images/erase.png"><h4>Erase</h4></button>`;
-    content += `<button onclick="notes()" id="imgNote"><img src="images/notesOff.png"><h4>Notes</h4></button>`;
+    content += `<button onclick="undo()"><img src="undo.png"><h4>Undo</h4></button>`;
+    content += `<button onclick="erase()"><img src="erase.png"><h4>Erase</h4></button>`;
+    content += `<button onclick="notes()" id="imgNote"><img src="notesOff.png"><h4>Notes</h4></button>`;
     content += '</div>';
   }
 
@@ -244,9 +244,9 @@ function undo() {
 
 function notes() {
   if (note) {
-    document.getElementById('imgNote').innerHTML = '<img src="images/notesOff.png"><h4>Notes</h4>';
+    document.getElementById('imgNote').innerHTML = '<img src="notesOff.png"><h4>Notes</h4>';
   } else {
-    document.getElementById('imgNote').innerHTML = '<img src="images/notes.png"><h4>Notes</h4>';
+    document.getElementById('imgNote').innerHTML = '<img src="notes.png"><h4>Notes</h4>';
   }
   note = !note;
 }
