@@ -1,0 +1,404 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgba(236,243,235,255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ button{
+  cursor: pointer;
+ }
+#content {
+  display: grid;
+  grid-template-columns: 1fr 50% 1fr;
+  height: 100%;
+  width: 100%;
+}
+
+#left {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+#middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#right {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+#middleDiv{
+  display: grid;
+  grid-template-columns: repeat(9,1fr);
+  grid-template-rows: repeat(9,1fr);
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  gap: 0;
+  background-color: white;
+  aspect-ratio: 1 / 1;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#middleDiv button{
+  height: 100%;
+  border-radius: 0;
+  border: none;
+  border: 2px solid #45d9c3;
+  background-color: rgb(239, 249, 242);
+  font-size: 300%;
+  font-family: 'Roboto Mono', monospace;
+}
+
+#middleDiv button.clicked{
+  background-color: rgba(122,204,156,255);
+}
+
+#middleDiv button.bigBorderBottom{
+  border-bottom: 6px solid #333;
+}
+
+#middleDiv button.bigBorderTOP{
+  border-top: 6px solid #333;
+}
+
+#middleDiv button.bigBorderLeft{
+  border-left: 6px solid #333;
+}
+
+#middleDiv button.bigBorderRight{
+  border-right: 6px solid #333;
+}
+
+#middleDiv button.smallBorderBottom{
+  border-bottom: 2px solid #333;
+}
+
+#middleDiv button.smallBorderTOP{
+  border-top: 2px solid #333;
+}
+
+#middleDiv button.smallBorderLeft{
+  border-left: 2px solid #333;
+}
+
+#middleDiv button.smallBorderRight{
+  border-right: 2px solid #333;
+}
+
+#rightDiv{
+  display: grid;
+  grid-template-rows: repeat(9,1fr);
+  height: 80%;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  padding: 0;
+  gap: 1%;
+}
+
+#rightDiv button {
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: white;
+  border: none;
+  border-radius: 5%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  color: rgba(84,143,87,255);
+}
+
+#rightDiv button:hover {
+  background-color: #e0f7fa;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+#rightDiv button:active {
+  background-color: #b2ebf2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
+}
+
+
+#rightDiv button h4{
+  font-size: 200%;
+  margin: 0;
+  font-family: 'Roboto Mono', monospace;
+}
+
+#leftDiv{
+  display: grid;
+  grid-template-rows: repeat(4,1fr);
+  height: 80%;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  padding: 0;
+  gap: 1%;
+}
+
+#leftDiv button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: white;
+  border: none;
+  border-radius: 5%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  margin: 0;
+  padding: 20px;
+}
+
+#leftDiv button:hover {
+  background-color: #e0f7fa;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+#leftDiv button:active {
+  background-color: #b2ebf2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
+}
+
+
+#leftDiv img {
+  width: 100%;
+}
+
+#leftDiv button h4{
+  font-size: 150%;
+  margin: 0;
+  font-family: 'Roboto Mono', monospace;
+}
+
+#leftDiv button h1{
+  color: rgba(84,143,87,255);
+  font-size: 300%;
+  margin: 0;
+  font-family: 'Roboto Mono', monospace;
+}
+
+#startPage{
+  display: flex;
+  flex-direction: column;
+}
+
+#startPage button {
+  padding: 10px 20px;
+  margin: 5px 0;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+#startPage button:hover {
+  background-color: #45a049;
+}
+
+#startPage button:active {
+  background-color: #3e8e41;
+  transform: scale(0.98);
+}
+
+h1 {
+  font-size: 75px; /* 你可以根據需求調整數值 */
+}
+
+/* Easy */
+#startPage .easy {
+  padding: 10px 20px;
+  margin: 5px 0;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+#startPage .easy:hover {
+  background-color: #45a049;
+}
+
+#startPage .easy:active {
+  background-color: #3e8e41;
+  transform: scale(0.98);
+}
+
+/* Medium */
+#startPage .medium {
+  padding: 10px 20px;
+  margin: 5px 0;
+  background-color: #8BC34A;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+#startPage .medium:hover {
+  background-color: #7CB342;
+}
+
+#startPage .medium:active {
+  background-color: #689F38;
+  transform: scale(0.98);
+}
+
+/* Hard */
+#startPage .hard {
+  padding: 10px 20px;
+  margin: 5px 0;
+  background-color: #FF9800;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+#startPage .hard:hover {
+  background-color: #FB8C00;
+}
+
+#startPage .hard:active {
+  background-color: #F57C00;
+  transform: scale(0.98);
+}
+
+/* Very-Hard */
+#startPage .very-hard {
+  padding: 10px 20px;
+  margin: 5px 0;
+  background-color: #F44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+#startPage .very-hard:hover {
+  background-color: #E53935;
+}
+
+#startPage .very-hard:active {
+  background-color: #D32F2F;
+  transform: scale(0.98);
+}
+
+/* Insane */
+#startPage .insane {
+  padding: 10px 20px;
+  margin: 5px 0;
+  background-color: #B71C1C;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+#startPage .insane:hover {
+  background-color: #C62828;
+}
+
+#startPage .insane:active {
+  background-color: #D32F2F;
+  transform: scale(0.98);
+}
+
+/* Inhuman */
+#startPage .inhuman {
+  padding: 10px 20px;
+  margin: 5px 0;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+#startPage .inhuman:hover {
+  background-color: #424242;
+}
+
+#startPage .inhuman:active {
+  background-color: #616161;
+  transform: scale(0.98);
+}
+
+#startPage #letsGo {
+  padding: 10px 20px;
+  margin: 5px 0;
+  background-color: #007bff; /* 藍色 */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+#startPage #letsGo:hover {
+  background-color: #0056b3; /* 更深的藍色 */
+}
+#startPage #letsGo:active {
+  background-color: #004085; /* 更深的藍色 */
+  transform: scale(0.98);
+}
+
+.addedRight{
+  color: rgba(81,141,83,255);
+}
+
+.addedWrong{
+  color: red;
+}
+
+.littleNote{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(3,1fr);
+}
+
+.littleNote p{
+  color: rgba(81,141,83,255);
+  margin: 0;
+  font-size: 45%;
+}
